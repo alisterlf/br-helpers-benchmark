@@ -19,7 +19,7 @@ function createRepeatedDigitValues(length) {
 
 function createRepeatedSanityCases(repeatedValues) {
   return repeatedValues.map((value) => ({
-    label: `repeated ${value[0]}`,
+    label: `repetido ${value[0]}`,
     value,
     expected: false,
   }));
@@ -137,15 +137,15 @@ const documentDefinitions = {
     },
     createSanityCases() {
       return [
-        { label: 'raw valid', value: '13768663663', expected: true },
-        { label: 'masked valid', value: '137.686.636-63', expected: true },
-        { label: 'raw invalid', value: '13768663664', expected: false },
-        { label: 'masked invalid', value: '137.686.636-64', expected: false },
+        { label: 'válido sem máscara', value: '13768663663', expected: true },
+        { label: 'válido com máscara', value: '137.686.636-63', expected: true },
+        { label: 'inválido sem máscara', value: '13768663664', expected: false },
+        { label: 'inválido com máscara', value: '137.686.636-64', expected: false },
         ...createRepeatedSanityCases(cpfRepeatedValues),
-        { label: 'incomplete raw', value: '355123', expected: false },
-        { label: 'incomplete masked', value: '355.123', expected: false },
-        { label: 'wrong dv raw', value: '53265691081', expected: false },
-        { label: 'wrong dv masked', value: '532.656.910-81', expected: false },
+        { label: 'incompleto sem máscara', value: '355123', expected: false },
+        { label: 'incompleto com máscara', value: '355.123', expected: false },
+        { label: 'dv incorreto sem máscara', value: '53265691081', expected: false },
+        { label: 'dv incorreto com máscara', value: '532.656.910-81', expected: false },
       ];
     },
   },
@@ -164,15 +164,15 @@ const documentDefinitions = {
     },
     createSanityCases() {
       return [
-        { label: 'raw valid', value: '26149878000187', expected: true },
-        { label: 'masked valid', value: '26.149.878/0001-87', expected: true },
-        { label: 'raw invalid', value: '26149878000188', expected: false },
-        { label: 'masked invalid', value: '26.149.878/0001-88', expected: false },
+        { label: 'válido sem máscara', value: '26149878000187', expected: true },
+        { label: 'válido com máscara', value: '26.149.878/0001-87', expected: true },
+        { label: 'inválido sem máscara', value: '26149878000188', expected: false },
+        { label: 'inválido com máscara', value: '26.149.878/0001-88', expected: false },
         ...createRepeatedSanityCases(cnpjRepeatedValues),
-        { label: 'incomplete raw', value: '26149878', expected: false },
-        { label: 'incomplete masked', value: '26.149.878/0001', expected: false },
-        { label: 'wrong dv raw', value: '26149878000188', expected: false },
-        { label: 'wrong dv masked', value: '26.149.878/0001-88', expected: false },
+        { label: 'incompleto sem máscara', value: '26149878', expected: false },
+        { label: 'incompleto com máscara', value: '26.149.878/0001', expected: false },
+        { label: 'dv incorreto sem máscara', value: '26149878000188', expected: false },
+        { label: 'dv incorreto com máscara', value: '26.149.878/0001-88', expected: false },
       ];
     },
   },
@@ -195,38 +195,38 @@ function buildScenarios(documentId, size) {
   return [
     {
       id: 'raw_valid',
-      label: 'Raw valid',
-      description: `Valid ${definition.pluralLabel} with digits only.`,
+      label: 'Válidos sem máscara',
+      description: `${definition.pluralLabel} válidos com apenas dígitos.`,
       values: dataset.validRaw,
     },
     {
       id: 'masked_valid',
-      label: 'Masked valid',
-      description: `Valid ${definition.pluralLabel} with punctuation.`,
+      label: 'Válidos com máscara',
+      description: `${definition.pluralLabel} válidos com pontuação.`,
       values: dataset.validMasked,
     },
     {
       id: 'invalid_wrong_check_digits',
-      label: 'Wrong DV',
-      description: `Invalid ${definition.pluralLabel} with incorrect check digits.`,
+      label: 'DV incorreto',
+      description: `${definition.pluralLabel} inválidos com dígitos verificadores incorretos.`,
       values: dataset.invalidWrongCheckDigits,
     },
     {
       id: 'invalid_equal_digits',
-      label: 'Equal digits',
-      description: `Invalid ${definition.pluralLabel} made of repeated equal digits.`,
+      label: 'Dígitos iguais',
+      description: `${definition.pluralLabel} inválidos formados por dígitos iguais repetidos.`,
       values: dataset.invalidEqualDigits,
     },
     {
       id: 'invalid_incomplete',
-      label: 'Incomplete',
-      description: `Invalid ${definition.pluralLabel} with missing digits.`,
+      label: 'Incompletos',
+      description: `${definition.pluralLabel} inválidos com dígitos faltando.`,
       values: dataset.invalidIncomplete,
     },
     {
       id: 'mixed',
-      label: 'Mixed',
-      description: `Valid, invalid, masked, repeated and incomplete ${definition.pluralLabel} mixed together.`,
+      label: 'Misto',
+      description: `${definition.pluralLabel} válidos, inválidos, com máscara, repetidos e incompletos misturados.`,
       values: dataset.mixed,
     },
   ];

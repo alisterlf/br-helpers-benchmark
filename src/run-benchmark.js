@@ -288,20 +288,20 @@ function formatRatio(value) {
 }
 
 function formatSupport(value) {
-  return value ? 'Yes' : 'No';
+  return value ? 'Sim' : 'Não';
 }
 
 function createCoverageTable(results) {
   const lines = [
-    '| Package | Version | Source | CPF | CNPJ | CNPJ alfanumerico |',
-    '| --- | ---: | --- | ---: | ---: | ---: |',
+    '| Pacote | Versão | CPF | CNPJ | CNPJ alfanumérico |',
+    '| --- | ---: | ---: | ---: | ---: |',
   ];
 
   for (const library of results.libraries) {
     lines.push(
-      `| [${library.label}](${library.homepage}) | ${library.version} | ${library.source} | ${formatSupport(
-        library.supports.cpf
-      )} | ${formatSupport(library.supports.cnpj)} | ${formatSupport(library.supports.cnpjAlphanumeric)} |`
+      `| [${library.label}](${library.homepage}) | ${library.version} | ${formatSupport(library.supports.cpf)} | ${formatSupport(
+        library.supports.cnpj
+      )} | ${formatSupport(library.supports.cnpjAlphanumeric)} |`
     );
   }
 
@@ -313,8 +313,8 @@ function createRankingTable(benchmark, baselineLibraryId) {
   const rankedLibraries = sortLibrariesByScenario(benchmark, 'mixed');
 
   const lines = [
-    '| Rank | Package | Version | Source | Mixed ops/s | Relative to br-helpers |',
-    '| ---: | --- | ---: | --- | ---: | ---: |',
+    '| Posição | Pacote | Versão | Misto ops/s | Relativo ao br-helpers |',
+    '| ---: | --- | ---: | ---: | ---: |',
   ];
 
   rankedLibraries.forEach((library, index) => {
@@ -322,7 +322,7 @@ function createRankingTable(benchmark, baselineLibraryId) {
     const relativeToBaseline = baselineOps / measurement;
 
     lines.push(
-      `| ${index + 1} | [${library.label}](${library.homepage}) | ${library.version} | ${library.source} | ${formatInteger(
+      `| ${index + 1} | [${library.label}](${library.homepage}) | ${library.version} | ${formatInteger(
         measurement
       )} | ${formatRatio(relativeToBaseline)} |`
     );
@@ -341,11 +341,11 @@ function createScenarioTable(benchmark, baselineLibraryId, coverageByLibraryId) 
   }));
   const lines = isCnpjBenchmark
     ? [
-        `| Package | ${scenarioColumns.map((scenario) => scenario.label).join(' | ')} | CNPJ alfanumerico | Mixed vs br-helpers |`,
+        `| Pacote | ${scenarioColumns.map((scenario) => scenario.label).join(' | ')} | CNPJ alfanumérico | Misto vs br-helpers |`,
         `| --- | ${scenarioColumns.map(() => '---:').join(' | ')} | ---: | ---: |`,
       ]
     : [
-        `| Package | ${scenarioColumns.map((scenario) => scenario.label).join(' | ')} | Mixed vs br-helpers |`,
+        `| Pacote | ${scenarioColumns.map((scenario) => scenario.label).join(' | ')} | Misto vs br-helpers |`,
         `| --- | ${scenarioColumns.map(() => '---:').join(' | ')} | ---: |`,
       ];
 
@@ -381,7 +381,7 @@ function renderBenchmarkSection(benchmark, baselineLibraryId, coverageByLibraryI
   const lines = [
     `### Benchmark de ${benchmark.label}`,
     '',
-    '#### Ranking por cenario misto',
+    '#### Ranking por cenário misto',
     '',
     createRankingTable(benchmark, baselineLibraryId),
     '',
@@ -416,15 +416,15 @@ function renderReadmeSection(results) {
   const coverageByLibraryId = new Map(results.libraries.map((library) => [library.id, library]));
   const sections = [
     [
-      '### Ultima execucao',
+      '### Última execução',
       '',
       `- Gerado em: ${generatedAt}`,
       `- Node.js: \`${results.environment.node}\``,
       `- Plataforma: \`${results.environment.platform}\` (${results.environment.arch})`,
       `- CPU: \`${results.environment.cpuModel}\` x${results.environment.cpuCount}`,
-      `- Dataset por cenario base: ${formatInteger(results.options.datasetSize)} documentos`,
+      `- Dataset por cenário base: ${formatInteger(results.options.datasetSize)} documentos`,
       `- Warmup por tarefa: ${formatInteger(results.options.warmupTimeMs)} ms`,
-      `- Medicao por tarefa: ${formatInteger(results.options.benchmarkTimeMs)} ms`,
+      `- Medição por tarefa: ${formatInteger(results.options.benchmarkTimeMs)} ms`,
     ].join('\n'),
     ['### Tabela comparativa', '', createCoverageTable(results)].join('\n'),
     ...DOCUMENT_IDS.map((documentId) =>
