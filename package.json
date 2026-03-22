@@ -1,0 +1,32 @@
+{
+  "name": "br-helpers-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Benchmarks for comparing br-helpers CPF and CNPJ validation against popular npm validators.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "scripts": {
+    "benchmark": "node ./src/run-benchmark.js",
+    "benchmark:print": "node ./src/run-benchmark.js --no-readme",
+    "readme": "node ./src/run-benchmark.js --readme-only"
+  },
+  "dependencies": {
+    "@fnando/cnpj": "^2.0.0",
+    "@fnando/cpf": "^1.0.2",
+    "br-helpers": "^3.1.1",
+    "br-validations": "^0.3.1",
+    "brazilian-values": "^0.13.1",
+    "cpf": "^2.0.1",
+    "cpf-cnpj-validator": "^1.0.3",
+    "gerador-validador-cpf": "^6.3.0",
+    "js-brasil": "^2.6.4",
+    "stdnum": "^1.11.13",
+    "tinybench": "^6.0.0",
+    "validar-cpf": "^3.1.1",
+    "validation-br": "^1.6.4",
+    "validations-br": "^1.6.1"
+  }
+}
