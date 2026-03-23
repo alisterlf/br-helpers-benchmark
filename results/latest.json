@@ -1,0 +1,1998 @@
+{
+  "generatedAt": "2026-03-22T19:28:01.242Z",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32 10.0.26220",
+    "arch": "x64",
+    "cpuModel": "AMD Ryzen 9 7950X 16-Core Processor            ",
+    "cpuCount": 32
+  },
+  "options": {
+    "datasetSize": 25000,
+    "benchmarkTimeMs": 3000,
+    "warmupTimeMs": 1000,
+    "minIterations": 1,
+    "minWarmupIterations": 1,
+    "baselineLibraryId": "br-helpers"
+  },
+  "libraries": [
+    {
+      "id": "br-helpers",
+      "label": "br-helpers",
+      "homepage": "https://www.npmjs.com/package/br-helpers",
+      "version": "3.1.1",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": true
+      }
+    },
+    {
+      "id": "br-helpers-local-dist",
+      "label": "br-helpers (local dist)",
+      "homepage": "https://github.com/alisterlf/br-helpers",
+      "version": "3.1.2",
+      "source": "local dist",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": true
+      }
+    },
+    {
+      "id": "cpf-cnpj-validator",
+      "label": "cpf-cnpj-validator",
+      "homepage": "https://www.npmjs.com/package/cpf-cnpj-validator",
+      "version": "1.0.3",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "@fnando/cpf",
+      "label": "@fnando/cpf",
+      "homepage": "https://www.npmjs.com/package/@fnando/cpf",
+      "version": "1.0.2",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": false,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "@fnando/cnpj",
+      "label": "@fnando/cnpj",
+      "homepage": "https://www.npmjs.com/package/@fnando/cnpj",
+      "version": "2.0.0",
+      "source": "npm package",
+      "supports": {
+        "cpf": false,
+        "cnpj": true,
+        "cnpjAlphanumeric": true
+      }
+    },
+    {
+      "id": "brazilian-values",
+      "label": "brazilian-values",
+      "homepage": "https://www.npmjs.com/package/brazilian-values",
+      "version": "0.13.1",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "cpf",
+      "label": "cpf",
+      "homepage": "https://www.npmjs.com/package/cpf",
+      "version": "2.0.1",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": false,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "js-brasil",
+      "label": "js-brasil",
+      "homepage": "https://www.npmjs.com/package/js-brasil",
+      "version": "2.6.4",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "gerador-validador-cpf",
+      "label": "gerador-validador-cpf",
+      "homepage": "https://www.npmjs.com/package/gerador-validador-cpf",
+      "version": "6.3.0",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": false,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "validar-cpf",
+      "label": "validar-cpf",
+      "homepage": "https://www.npmjs.com/package/validar-cpf",
+      "version": "3.1.1",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": false,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "stdnum",
+      "label": "stdnum",
+      "homepage": "https://www.npmjs.com/package/stdnum",
+      "version": "1.11.13",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "br-validations",
+      "label": "br-validations",
+      "homepage": "https://www.npmjs.com/package/br-validations",
+      "version": "0.3.1",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "validations-br",
+      "label": "validations-br",
+      "homepage": "https://www.npmjs.com/package/validations-br",
+      "version": "1.6.1",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": false
+      }
+    },
+    {
+      "id": "validation-br",
+      "label": "validation-br",
+      "homepage": "https://www.npmjs.com/package/validation-br",
+      "version": "1.6.4",
+      "source": "npm package",
+      "supports": {
+        "cpf": true,
+        "cnpj": true,
+        "cnpjAlphanumeric": true
+      }
+    }
+  ],
+  "benchmarks": {
+    "cpf": {
+      "id": "cpf",
+      "label": "CPF",
+      "libraries": [
+        {
+          "id": "br-helpers",
+          "label": "br-helpers",
+          "homepage": "https://www.npmjs.com/package/br-helpers",
+          "version": "3.1.1",
+          "source": "npm package"
+        },
+        {
+          "id": "br-helpers-local-dist",
+          "label": "br-helpers (local dist)",
+          "homepage": "https://github.com/alisterlf/br-helpers",
+          "version": "3.1.2",
+          "source": "local dist"
+        },
+        {
+          "id": "cpf-cnpj-validator",
+          "label": "cpf-cnpj-validator",
+          "homepage": "https://www.npmjs.com/package/cpf-cnpj-validator",
+          "version": "1.0.3",
+          "source": "npm package"
+        },
+        {
+          "id": "@fnando/cpf",
+          "label": "@fnando/cpf",
+          "homepage": "https://www.npmjs.com/package/@fnando/cpf",
+          "version": "1.0.2",
+          "source": "npm package"
+        },
+        {
+          "id": "brazilian-values",
+          "label": "brazilian-values",
+          "homepage": "https://www.npmjs.com/package/brazilian-values",
+          "version": "0.13.1",
+          "source": "npm package"
+        },
+        {
+          "id": "cpf",
+          "label": "cpf",
+          "homepage": "https://www.npmjs.com/package/cpf",
+          "version": "2.0.1",
+          "source": "npm package"
+        },
+        {
+          "id": "js-brasil",
+          "label": "js-brasil",
+          "homepage": "https://www.npmjs.com/package/js-brasil",
+          "version": "2.6.4",
+          "source": "npm package"
+        },
+        {
+          "id": "gerador-validador-cpf",
+          "label": "gerador-validador-cpf",
+          "homepage": "https://www.npmjs.com/package/gerador-validador-cpf",
+          "version": "6.3.0",
+          "source": "npm package"
+        },
+        {
+          "id": "validar-cpf",
+          "label": "validar-cpf",
+          "homepage": "https://www.npmjs.com/package/validar-cpf",
+          "version": "3.1.1",
+          "source": "npm package"
+        },
+        {
+          "id": "br-validations",
+          "label": "br-validations",
+          "homepage": "https://www.npmjs.com/package/br-validations",
+          "version": "0.3.1",
+          "source": "npm package"
+        },
+        {
+          "id": "validations-br",
+          "label": "validations-br",
+          "homepage": "https://www.npmjs.com/package/validations-br",
+          "version": "1.6.1",
+          "source": "npm package"
+        },
+        {
+          "id": "validation-br",
+          "label": "validation-br",
+          "homepage": "https://www.npmjs.com/package/validation-br",
+          "version": "1.6.4",
+          "source": "npm package"
+        }
+      ],
+      "skippedLibraries": [
+        {
+          "id": "stdnum",
+          "label": "stdnum",
+          "homepage": "https://www.npmjs.com/package/stdnum",
+          "version": "1.11.13",
+          "source": "npm package",
+          "failures": [
+            "stdnum returned true for CPF \"repetido 0\" but expected false.",
+            "stdnum returned true for CPF \"repetido 1\" but expected false.",
+            "stdnum returned true for CPF \"repetido 2\" but expected false.",
+            "stdnum returned true for CPF \"repetido 3\" but expected false.",
+            "stdnum returned true for CPF \"repetido 4\" but expected false.",
+            "stdnum returned true for CPF \"repetido 5\" but expected false.",
+            "stdnum returned true for CPF \"repetido 6\" but expected false.",
+            "stdnum returned true for CPF \"repetido 7\" but expected false.",
+            "stdnum returned true for CPF \"repetido 8\" but expected false.",
+            "stdnum returned true for CPF \"repetido 9\" but expected false."
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "raw_valid",
+          "label": "Válidos sem máscara",
+          "description": "CPFs válidos com apenas dígitos.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "masked_valid",
+          "label": "Válidos com máscara",
+          "description": "CPFs válidos com pontuação.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "invalid_wrong_check_digits",
+          "label": "DV incorreto",
+          "description": "CPFs inválidos com dígitos verificadores incorretos.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "invalid_equal_digits",
+          "label": "Dígitos iguais",
+          "description": "CPFs inválidos formados por dígitos iguais repetidos.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "invalid_incomplete",
+          "label": "Incompletos",
+          "description": "CPFs inválidos com dígitos faltando.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "mixed",
+          "label": "Misto",
+          "description": "CPFs válidos, inválidos, com máscara, repetidos e incompletos misturados.",
+          "sampleSize": 150000
+        }
+      ],
+      "measurements": {
+        "raw_valid": {
+          "br-helpers": {
+            "medianOpsPerSecond": 14393459.61195334,
+            "meanOpsPerSecond": 14260928.15591427,
+            "minOpsPerSecond": 9910017.045231158,
+            "maxOpsPerSecond": 14965579.167912234,
+            "relativeMarginOfError": 0.15708850755810588,
+            "sampleCount": 1710,
+            "totalTimeMs": 3001.1788000000142,
+            "periodMsPerBatch": 1.7550753216374353,
+            "checksum": 42750000,
+            "runs": 1710
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 12386048.355127634,
+            "meanOpsPerSecond": 12326026.916306334,
+            "minOpsPerSecond": 10867675.186923629,
+            "maxOpsPerSecond": 12705834.519211559,
+            "relativeMarginOfError": 0.08753050573056154,
+            "sampleCount": 1479,
+            "totalTimeMs": 3000.6556000000146,
+            "periodMsPerBatch": 2.0288408384043373,
+            "checksum": 36975000,
+            "runs": 1479
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 1983804.222360213,
+            "meanOpsPerSecond": 1978268.2803092524,
+            "minOpsPerSecond": 1892935.5644730765,
+            "maxOpsPerSecond": 2028068.4675912792,
+            "relativeMarginOfError": 0.14848371489828846,
+            "sampleCount": 238,
+            "totalTimeMs": 3008.0908000000018,
+            "periodMsPerBatch": 12.639036974789922,
+            "checksum": 5950000,
+            "runs": 238
+          },
+          "@fnando/cpf": {
+            "medianOpsPerSecond": 2001521.1560786383,
+            "meanOpsPerSecond": 1989024.2644576868,
+            "minOpsPerSecond": 1644888.3449791737,
+            "maxOpsPerSecond": 2057426.8996217875,
+            "relativeMarginOfError": 0.3478932118198328,
+            "sampleCount": 239,
+            "totalTimeMs": 3006.3967999999913,
+            "periodMsPerBatch": 12.579066108786575,
+            "checksum": 5975000,
+            "runs": 239
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 4028749.158148334,
+            "meanOpsPerSecond": 3997414.177586758,
+            "minOpsPerSecond": 3231602.487042001,
+            "maxOpsPerSecond": 4138593.2093953164,
+            "relativeMarginOfError": 0.22547386625681587,
+            "sampleCount": 480,
+            "totalTimeMs": 3003.952199999996,
+            "periodMsPerBatch": 6.258233749999992,
+            "checksum": 12000000,
+            "runs": 480
+          },
+          "cpf": {
+            "medianOpsPerSecond": 1307158.785886784,
+            "meanOpsPerSecond": 1309077.9414449881,
+            "minOpsPerSecond": 1263564.3634415737,
+            "maxOpsPerSecond": 1345598.0106679723,
+            "relativeMarginOfError": 0.21360800662661075,
+            "sampleCount": 158,
+            "totalTimeMs": 3017.945299999985,
+            "periodMsPerBatch": 19.10091962025307,
+            "checksum": 3950000,
+            "runs": 158
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 4093160.3293637047,
+            "meanOpsPerSecond": 4067380.4854574264,
+            "minOpsPerSecond": 3615904.1930027334,
+            "maxOpsPerSecond": 4184100.4184110607,
+            "relativeMarginOfError": 0.1826686516151869,
+            "sampleCount": 488,
+            "totalTimeMs": 3000.8003999999964,
+            "periodMsPerBatch": 6.149181147540976,
+            "checksum": 12200000,
+            "runs": 488
+          },
+          "gerador-validador-cpf": {
+            "medianOpsPerSecond": 7726781.030409529,
+            "meanOpsPerSecond": 7653789.8926237775,
+            "minOpsPerSecond": 6357764.101527817,
+            "maxOpsPerSecond": 7989007.126193048,
+            "relativeMarginOfError": 0.21307628507655452,
+            "sampleCount": 918,
+            "totalTimeMs": 3001.982800000027,
+            "periodMsPerBatch": 3.2701337690632104,
+            "checksum": 22950000,
+            "runs": 918
+          },
+          "validar-cpf": {
+            "medianOpsPerSecond": 6293424.629948624,
+            "meanOpsPerSecond": 6238289.793034239,
+            "minOpsPerSecond": 4391203.5410653595,
+            "maxOpsPerSecond": 6599091.96494974,
+            "relativeMarginOfError": 0.31107013132366423,
+            "sampleCount": 747,
+            "totalTimeMs": 3000.1204000000653,
+            "periodMsPerBatch": 4.016225435073715,
+            "checksum": 18675000,
+            "runs": 747
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 10540073.358918233,
+            "meanOpsPerSecond": 10529323.71151539,
+            "minOpsPerSecond": 7345811.418333313,
+            "maxOpsPerSecond": 11164203.099177323,
+            "relativeMarginOfError": 0.17860175706633385,
+            "sampleCount": 1263,
+            "totalTimeMs": 3002.0460999998686,
+            "periodMsPerBatch": 2.376916943784536,
+            "checksum": 31575000,
+            "runs": 1263
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 4086870.5200424264,
+            "meanOpsPerSecond": 4052874.1495251637,
+            "minOpsPerSecond": 3381302.748324801,
+            "maxOpsPerSecond": 4221261.650685126,
+            "relativeMarginOfError": 0.2753552596567524,
+            "sampleCount": 486,
+            "totalTimeMs": 3000.9003999999914,
+            "periodMsPerBatch": 6.174692181069941,
+            "checksum": 12150000,
+            "runs": 486
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 5692621.225105069,
+            "meanOpsPerSecond": 5650097.985674977,
+            "minOpsPerSecond": 5002301.058487008,
+            "maxOpsPerSecond": 5862489.447518962,
+            "relativeMarginOfError": 0.20309584226061508,
+            "sampleCount": 678,
+            "totalTimeMs": 3002.2308999999877,
+            "periodMsPerBatch": 4.42806917404128,
+            "checksum": 16950000,
+            "runs": 678
+          }
+        },
+        "masked_valid": {
+          "br-helpers": {
+            "medianOpsPerSecond": 8368621.020974509,
+            "meanOpsPerSecond": 8336765.070476939,
+            "minOpsPerSecond": 6234569.440638647,
+            "maxOpsPerSecond": 8911385.185721328,
+            "relativeMarginOfError": 0.20680067223124188,
+            "sampleCount": 1000,
+            "totalTimeMs": 3002.382000000056,
+            "periodMsPerBatch": 3.002382000000056,
+            "checksum": 25000000,
+            "runs": 1000
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 7710932.606053403,
+            "meanOpsPerSecond": 7687108.559847286,
+            "minOpsPerSecond": 6233636.703669378,
+            "maxOpsPerSecond": 7966350.137018089,
+            "relativeMarginOfError": 0.14061927897677562,
+            "sampleCount": 922,
+            "totalTimeMs": 3000.0082999999504,
+            "periodMsPerBatch": 3.253805097613829,
+            "checksum": 23050000,
+            "runs": 922
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 1808632.2399549203,
+            "meanOpsPerSecond": 1801647.2617989571,
+            "minOpsPerSecond": 1575468.0715638723,
+            "maxOpsPerSecond": 1860229.7755807743,
+            "relativeMarginOfError": 0.2900040308520196,
+            "sampleCount": 217,
+            "totalTimeMs": 3012.614699999991,
+            "periodMsPerBatch": 13.883017050691203,
+            "checksum": 5425000,
+            "runs": 217
+          },
+          "@fnando/cpf": {
+            "medianOpsPerSecond": 1800413.3749110214,
+            "meanOpsPerSecond": 1800278.0529897735,
+            "minOpsPerSecond": 1742135.9981044629,
+            "maxOpsPerSecond": 1850577.0099129758,
+            "relativeMarginOfError": 0.14668753376725116,
+            "sampleCount": 217,
+            "totalTimeMs": 3013.7851999999984,
+            "periodMsPerBatch": 13.888411059907828,
+            "checksum": 5425000,
+            "runs": 217
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 3566028.58528071,
+            "meanOpsPerSecond": 3552161.4581673327,
+            "minOpsPerSecond": 3271095.2935495065,
+            "maxOpsPerSecond": 3735189.971759703,
+            "relativeMarginOfError": 0.21120770770351543,
+            "sampleCount": 427,
+            "totalTimeMs": 3006.716500000126,
+            "periodMsPerBatch": 7.041490632318796,
+            "checksum": 10675000,
+            "runs": 427
+          },
+          "cpf": {
+            "medianOpsPerSecond": 1210395.876911868,
+            "meanOpsPerSecond": 1210108.0737740719,
+            "minOpsPerSecond": 1177041.1069841196,
+            "maxOpsPerSecond": 1236148.9510044784,
+            "relativeMarginOfError": 0.13344558323125266,
+            "sampleCount": 146,
+            "totalTimeMs": 3016.4599000000744,
+            "periodMsPerBatch": 20.66068424657585,
+            "checksum": 3650000,
+            "runs": 146
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 3466012.2835412,
+            "meanOpsPerSecond": 3456080.8743109205,
+            "minOpsPerSecond": 2811421.1171487467,
+            "maxOpsPerSecond": 3542130.095354247,
+            "relativeMarginOfError": 0.19350888526805665,
+            "sampleCount": 415,
+            "totalTimeMs": 3003.314100000018,
+            "periodMsPerBatch": 7.236901445783175,
+            "checksum": 10375000,
+            "runs": 415
+          },
+          "gerador-validador-cpf": {
+            "medianOpsPerSecond": 5137795.71485608,
+            "meanOpsPerSecond": 5116466.217733014,
+            "minOpsPerSecond": 3697076.3520168886,
+            "maxOpsPerSecond": 5305940.531018712,
+            "relativeMarginOfError": 0.2006109475506098,
+            "sampleCount": 614,
+            "totalTimeMs": 3002.2195000001375,
+            "periodMsPerBatch": 4.889608306189149,
+            "checksum": 15350000,
+            "runs": 614
+          },
+          "validar-cpf": {
+            "medianOpsPerSecond": 4897543.3922286695,
+            "meanOpsPerSecond": 4871493.301707172,
+            "minOpsPerSecond": 4278404.32632745,
+            "maxOpsPerSecond": 5033421.921564532,
+            "relativeMarginOfError": 0.1920188273568568,
+            "sampleCount": 585,
+            "totalTimeMs": 3003.9170000000886,
+            "periodMsPerBatch": 5.134900854701006,
+            "checksum": 14625000,
+            "runs": 585
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 7464023.4138488425,
+            "meanOpsPerSecond": 7448879.331158317,
+            "minOpsPerSecond": 6665600.17064044,
+            "maxOpsPerSecond": 7710338.02121215,
+            "relativeMarginOfError": 0.14509325048467145,
+            "sampleCount": 894,
+            "totalTimeMs": 3001.9563999999664,
+            "periodMsPerBatch": 3.35789306487692,
+            "checksum": 22350000,
+            "runs": 894
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 3452847.9089506874,
+            "meanOpsPerSecond": 3436897.375830663,
+            "minOpsPerSecond": 3066130.298271238,
+            "maxOpsPerSecond": 3576282.097131881,
+            "relativeMarginOfError": 0.22418652376304488,
+            "sampleCount": 413,
+            "totalTimeMs": 3005.8216000000393,
+            "periodMsPerBatch": 7.278018401937141,
+            "checksum": 10325000,
+            "runs": 413
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 4351004.211768868,
+            "meanOpsPerSecond": 4337975.039979336,
+            "minOpsPerSecond": 3899182.7313042767,
+            "maxOpsPerSecond": 4485592.277609282,
+            "relativeMarginOfError": 0.16460016440195233,
+            "sampleCount": 521,
+            "totalTimeMs": 3003.6763999999384,
+            "periodMsPerBatch": 5.765213819577617,
+            "checksum": 13025000,
+            "runs": 521
+          }
+        },
+        "invalid_wrong_check_digits": {
+          "br-helpers": {
+            "medianOpsPerSecond": 10219515.186216393,
+            "meanOpsPerSecond": 10193292.634124946,
+            "minOpsPerSecond": 9404860.431852408,
+            "maxOpsPerSecond": 10557432.43242257,
+            "relativeMarginOfError": 0.11521704649435183,
+            "sampleCount": 1223,
+            "totalTimeMs": 3000.812300000238,
+            "periodMsPerBatch": 2.453648650858739,
+            "checksum": 0,
+            "runs": 1223
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 9144278.42806683,
+            "meanOpsPerSecond": 9074038.33805763,
+            "minOpsPerSecond": 7259211.939955185,
+            "maxOpsPerSecond": 9433606.279012151,
+            "relativeMarginOfError": 0.2085267625732386,
+            "sampleCount": 1088,
+            "totalTimeMs": 3001.651799999876,
+            "periodMsPerBatch": 2.7588711397057684,
+            "checksum": 0,
+            "runs": 1088
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 1838113.6641803714,
+            "meanOpsPerSecond": 1848681.1002712173,
+            "minOpsPerSecond": 1763233.0641470994,
+            "maxOpsPerSecond": 1954254.803560427,
+            "relativeMarginOfError": 0.30668782621697344,
+            "sampleCount": 222,
+            "totalTimeMs": 3003.7358999998833,
+            "periodMsPerBatch": 13.530341891891366,
+            "checksum": 0,
+            "runs": 222
+          },
+          "@fnando/cpf": {
+            "medianOpsPerSecond": 1886927.7480358165,
+            "meanOpsPerSecond": 1880684.9233873575,
+            "minOpsPerSecond": 1776173.695579043,
+            "maxOpsPerSecond": 1937308.6907661576,
+            "relativeMarginOfError": 0.24001513575534142,
+            "sampleCount": 226,
+            "totalTimeMs": 3005.2395000000106,
+            "periodMsPerBatch": 13.297519911504471,
+            "checksum": 0,
+            "runs": 226
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 3880722.1247728514,
+            "meanOpsPerSecond": 3842974.373121421,
+            "minOpsPerSecond": 3358274.115765144,
+            "maxOpsPerSecond": 3956948.4013932836,
+            "relativeMarginOfError": 0.2194086386499555,
+            "sampleCount": 461,
+            "totalTimeMs": 3000.7829000000056,
+            "periodMsPerBatch": 6.509290455531466,
+            "checksum": 0,
+            "runs": 461
+          },
+          "cpf": {
+            "medianOpsPerSecond": 1250787.996437871,
+            "meanOpsPerSecond": 1248254.4117905742,
+            "minOpsPerSecond": 1210583.4043546387,
+            "maxOpsPerSecond": 1281092.1053983397,
+            "relativeMarginOfError": 0.1672425818778807,
+            "sampleCount": 150,
+            "totalTimeMs": 3004.518000000069,
+            "periodMsPerBatch": 20.030120000000462,
+            "checksum": 0,
+            "runs": 150
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 3714931.0640051696,
+            "meanOpsPerSecond": 3698843.5081711337,
+            "minOpsPerSecond": 3349231.0165598937,
+            "maxOpsPerSecond": 3810336.681353978,
+            "relativeMarginOfError": 0.17652905246296147,
+            "sampleCount": 444,
+            "totalTimeMs": 3002.042100000035,
+            "periodMsPerBatch": 6.761356081081161,
+            "checksum": 0,
+            "runs": 444
+          },
+          "gerador-validador-cpf": {
+            "medianOpsPerSecond": 5926839.098174649,
+            "meanOpsPerSecond": 5907908.722343985,
+            "minOpsPerSecond": 5244608.542421033,
+            "maxOpsPerSecond": 6149758.929454086,
+            "relativeMarginOfError": 0.14810544387630062,
+            "sampleCount": 709,
+            "totalTimeMs": 3001.4685000002355,
+            "periodMsPerBatch": 4.233382933709782,
+            "checksum": 0,
+            "runs": 709
+          },
+          "validar-cpf": {
+            "medianOpsPerSecond": 5391649.413379826,
+            "meanOpsPerSecond": 5388311.258670866,
+            "minOpsPerSecond": 4702607.125389328,
+            "maxOpsPerSecond": 5654189.754575116,
+            "relativeMarginOfError": 0.20056201907739565,
+            "sampleCount": 647,
+            "totalTimeMs": 3003.968700000085,
+            "periodMsPerBatch": 4.642919165378802,
+            "checksum": 0,
+            "runs": 647
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 8296827.293199597,
+            "meanOpsPerSecond": 8309075.084114196,
+            "minOpsPerSecond": 6386838.004234326,
+            "maxOpsPerSecond": 8744010.3529037,
+            "relativeMarginOfError": 0.19074103852260124,
+            "sampleCount": 997,
+            "totalTimeMs": 3002.6818999992975,
+            "periodMsPerBatch": 3.011717051152756,
+            "checksum": 0,
+            "runs": 997
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 3794864.799672716,
+            "meanOpsPerSecond": 3778486.5629291744,
+            "minOpsPerSecond": 3245573.038376028,
+            "maxOpsPerSecond": 3892747.033726224,
+            "relativeMarginOfError": 0.20570271918896113,
+            "sampleCount": 454,
+            "totalTimeMs": 3005.427900000068,
+            "periodMsPerBatch": 6.6198852422908985,
+            "checksum": 0,
+            "runs": 454
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 3346003.533371244,
+            "meanOpsPerSecond": 3338656.8957940126,
+            "minOpsPerSecond": 3074009.8614284056,
+            "maxOpsPerSecond": 3415487.1850976874,
+            "relativeMarginOfError": 0.12676903297920422,
+            "sampleCount": 401,
+            "totalTimeMs": 3003.2138000002014,
+            "periodMsPerBatch": 7.4893112219456395,
+            "checksum": 0,
+            "runs": 401
+          }
+        },
+        "invalid_equal_digits": {
+          "br-helpers": {
+            "medianOpsPerSecond": 25072710.861302797,
+            "meanOpsPerSecond": 24586002.939480368,
+            "minOpsPerSecond": 11079104.808387503,
+            "maxOpsPerSecond": 26875940.657850374,
+            "relativeMarginOfError": 0.22559674023898071,
+            "sampleCount": 2938,
+            "totalTimeMs": 3000.535000000731,
+            "periodMsPerBatch": 1.0212848876789418,
+            "checksum": 0,
+            "runs": 2938
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 19170309.025256906,
+            "meanOpsPerSecond": 19067328.55191753,
+            "minOpsPerSecond": 16113438.607784394,
+            "maxOpsPerSecond": 19775352.001186226,
+            "relativeMarginOfError": 0.11014675144339543,
+            "sampleCount": 2287,
+            "totalTimeMs": 3000.8540999999677,
+            "periodMsPerBatch": 1.3121355924792164,
+            "checksum": 0,
+            "runs": 2287
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 27911130.959223807,
+            "meanOpsPerSecond": 27720833.84134582,
+            "minOpsPerSecond": 22100424.328079775,
+            "maxOpsPerSecond": 29758362.099705495,
+            "relativeMarginOfError": 0.12390349463542352,
+            "sampleCount": 3322,
+            "totalTimeMs": 3000.1072999995376,
+            "periodMsPerBatch": 0.9031027393135272,
+            "checksum": 0,
+            "runs": 3322
+          },
+          "@fnando/cpf": {
+            "medianOpsPerSecond": 27478566.71814142,
+            "meanOpsPerSecond": 27261207.78280252,
+            "minOpsPerSecond": 13754401.408599762,
+            "maxOpsPerSecond": 28467319.516984448,
+            "relativeMarginOfError": 0.10127176805515639,
+            "sampleCount": 3269,
+            "totalTimeMs": 3000.7800999997417,
+            "periodMsPerBatch": 0.9179504741510375,
+            "checksum": 0,
+            "runs": 3269
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 5001950.845400969,
+            "meanOpsPerSecond": 4997657.848699649,
+            "minOpsPerSecond": 4679807.566305041,
+            "maxOpsPerSecond": 5178663.904728819,
+            "relativeMarginOfError": 0.11105215901042982,
+            "sampleCount": 600,
+            "totalTimeMs": 3001.985700000456,
+            "periodMsPerBatch": 5.00330950000076,
+            "checksum": 0,
+            "runs": 600
+          },
+          "cpf": {
+            "medianOpsPerSecond": 9425070.687939156,
+            "meanOpsPerSecond": 9363575.08005577,
+            "minOpsPerSecond": 8103727.71477019,
+            "maxOpsPerSecond": 9831681.610839639,
+            "relativeMarginOfError": 0.16761818574004456,
+            "sampleCount": 1123,
+            "totalTimeMs": 3000.8462999998883,
+            "periodMsPerBatch": 2.672169456812011,
+            "checksum": 0,
+            "runs": 1123
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 3475504.6540241395,
+            "meanOpsPerSecond": 3465303.127319673,
+            "minOpsPerSecond": 3106554.8306981544,
+            "maxOpsPerSecond": 3596811.7860271498,
+            "relativeMarginOfError": 0.1659337283420141,
+            "sampleCount": 416,
+            "totalTimeMs": 3002.111500000203,
+            "periodMsPerBatch": 7.216614182692795,
+            "checksum": 0,
+            "runs": 416
+          },
+          "gerador-validador-cpf": {
+            "medianOpsPerSecond": 11143799.589875096,
+            "meanOpsPerSecond": 11012056.001406,
+            "minOpsPerSecond": 8827060.235845407,
+            "maxOpsPerSecond": 11468415.982293133,
+            "relativeMarginOfError": 0.16130231509319273,
+            "sampleCount": 1321,
+            "totalTimeMs": 3001.757199999527,
+            "periodMsPerBatch": 2.272337017410694,
+            "checksum": 0,
+            "runs": 1321
+          },
+          "validar-cpf": {
+            "medianOpsPerSecond": 13058239.74918969,
+            "meanOpsPerSecond": 12980693.399070015,
+            "minOpsPerSecond": 11669156.086568912,
+            "maxOpsPerSecond": 13312742.957614105,
+            "relativeMarginOfError": 0.09139779306322177,
+            "sampleCount": 1558,
+            "totalTimeMs": 3001.656799999182,
+            "periodMsPerBatch": 1.9266089858788076,
+            "checksum": 0,
+            "runs": 1558
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 20520397.274761043,
+            "meanOpsPerSecond": 20398560.34926648,
+            "minOpsPerSecond": 17968806.152293097,
+            "maxOpsPerSecond": 21479508.54912112,
+            "relativeMarginOfError": 0.0956204187232669,
+            "sampleCount": 2447,
+            "totalTimeMs": 3000.783099999797,
+            "periodMsPerBatch": 1.2263110339190015,
+            "checksum": 0,
+            "runs": 2447
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 6696129.637066015,
+            "meanOpsPerSecond": 6677813.837842456,
+            "minOpsPerSecond": 6357764.101504289,
+            "maxOpsPerSecond": 6806795.905031066,
+            "relativeMarginOfError": 0.07581709508498422,
+            "sampleCount": 802,
+            "totalTimeMs": 3002.844799999788,
+            "periodMsPerBatch": 3.744195511221681,
+            "checksum": 0,
+            "runs": 802
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 7044039.3339080615,
+            "meanOpsPerSecond": 7014862.106803018,
+            "minOpsPerSecond": 6245628.060331883,
+            "maxOpsPerSecond": 7181225.404274077,
+            "relativeMarginOfError": 0.09154962895644599,
+            "sampleCount": 842,
+            "totalTimeMs": 3001.3367999994953,
+            "periodMsPerBatch": 3.564533016626479,
+            "checksum": 0,
+            "runs": 842
+          }
+        },
+        "invalid_incomplete": {
+          "br-helpers": {
+            "medianOpsPerSecond": 26180751.910878263,
+            "meanOpsPerSecond": 25816046.10712928,
+            "minOpsPerSecond": 20052939.76114947,
+            "maxOpsPerSecond": 27340332.459051136,
+            "relativeMarginOfError": 0.14243801902835757,
+            "sampleCount": 3093,
+            "totalTimeMs": 3000.55660000036,
+            "periodMsPerBatch": 0.9701120594892855,
+            "checksum": 0,
+            "runs": 3093
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 19195331.695110016,
+            "meanOpsPerSecond": 18839503.91316538,
+            "minOpsPerSecond": 10074551.682472818,
+            "maxOpsPerSecond": 19828680.203217056,
+            "relativeMarginOfError": 0.193168924231628,
+            "sampleCount": 2255,
+            "totalTimeMs": 3000.4371000009705,
+            "periodMsPerBatch": 1.3305707760536454,
+            "checksum": 0,
+            "runs": 2255
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 29425612.05318712,
+            "meanOpsPerSecond": 28880767.399353273,
+            "minOpsPerSecond": 16935374.610433497,
+            "maxOpsPerSecond": 31005829.09600253,
+            "relativeMarginOfError": 0.17893620493473034,
+            "sampleCount": 3455,
+            "totalTimeMs": 3000.29859999966,
+            "periodMsPerBatch": 0.868393227206848,
+            "checksum": 0,
+            "runs": 3455
+          },
+          "@fnando/cpf": {
+            "medianOpsPerSecond": 28564899.45219378,
+            "meanOpsPerSecond": 28141107.695813652,
+            "minOpsPerSecond": 15629884.33903108,
+            "maxOpsPerSecond": 29922202.274571005,
+            "relativeMarginOfError": 0.14569822692720166,
+            "sampleCount": 3371,
+            "totalTimeMs": 3000.833199999528,
+            "periodMsPerBatch": 0.890190803915612,
+            "checksum": 0,
+            "runs": 3371
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 91945568.2261626,
+            "meanOpsPerSecond": 90582387.34677413,
+            "minOpsPerSecond": 58045042.953714594,
+            "maxOpsPerSecond": 94696969.69855651,
+            "relativeMarginOfError": 0.08692169630315105,
+            "sampleCount": 10841,
+            "totalTimeMs": 3000.0818999992043,
+            "periodMsPerBatch": 0.27673479383813343,
+            "checksum": 0,
+            "runs": 10841
+          },
+          "cpf": {
+            "medianOpsPerSecond": 9622231.634145888,
+            "meanOpsPerSecond": 9667176.74824297,
+            "minOpsPerSecond": 8633491.038455183,
+            "maxOpsPerSecond": 10106318.470298314,
+            "relativeMarginOfError": 0.16420597789577834,
+            "sampleCount": 1160,
+            "totalTimeMs": 3002.3108000002394,
+            "periodMsPerBatch": 2.5881989655174475,
+            "checksum": 0,
+            "runs": 1160
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 16168671.581973748,
+            "meanOpsPerSecond": 16029484.54779254,
+            "minOpsPerSecond": 13526674.602259874,
+            "maxOpsPerSecond": 16642258.021378003,
+            "relativeMarginOfError": 0.12407230966824548,
+            "sampleCount": 1922,
+            "totalTimeMs": 3000.036699998862,
+            "periodMsPerBatch": 1.5608931841825504,
+            "checksum": 0,
+            "runs": 1922
+          },
+          "gerador-validador-cpf": {
+            "medianOpsPerSecond": 11330674.424963724,
+            "meanOpsPerSecond": 11283994.304064257,
+            "minOpsPerSecond": 7543526.145887379,
+            "maxOpsPerSecond": 11784670.500592625,
+            "relativeMarginOfError": 0.110604849799328,
+            "sampleCount": 1354,
+            "totalTimeMs": 3001.257899999211,
+            "periodMsPerBatch": 2.216586336779329,
+            "checksum": 0,
+            "runs": 1354
+          },
+          "validar-cpf": {
+            "medianOpsPerSecond": 31067478.563135963,
+            "meanOpsPerSecond": 30554162.243720204,
+            "minOpsPerSecond": 17026493.22336606,
+            "maxOpsPerSecond": 33033826.638353817,
+            "relativeMarginOfError": 0.14895786143497922,
+            "sampleCount": 3658,
+            "totalTimeMs": 3000.0214999994205,
+            "periodMsPerBatch": 0.820126161836911,
+            "checksum": 0,
+            "runs": 3658
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 27065064.41529811,
+            "meanOpsPerSecond": 26560645.053348903,
+            "minOpsPerSecond": 10195758.564477855,
+            "maxOpsPerSecond": 28338245.296084624,
+            "relativeMarginOfError": 0.16494486320718615,
+            "sampleCount": 3179,
+            "totalTimeMs": 3000.438699999766,
+            "periodMsPerBatch": 0.9438309845862742,
+            "checksum": 0,
+            "runs": 3179
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 29705323.194439016,
+            "meanOpsPerSecond": 29529066.30624459,
+            "minOpsPerSecond": 24652401.143863488,
+            "maxOpsPerSecond": 30994297.04892779,
+            "relativeMarginOfError": 0.089621469026375,
+            "sampleCount": 3541,
+            "totalTimeMs": 3000.2525999992213,
+            "periodMsPerBatch": 0.8472896356959111,
+            "checksum": 0,
+            "runs": 3541
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 3409059.9176356406,
+            "meanOpsPerSecond": 3388950.118840645,
+            "minOpsPerSecond": 3080486.9633718887,
+            "maxOpsPerSecond": 3502970.5189964324,
+            "relativeMarginOfError": 0.2152603229538886,
+            "sampleCount": 407,
+            "totalTimeMs": 3003.9048000000184,
+            "periodMsPerBatch": 7.380601474201519,
+            "checksum": 89947,
+            "runs": 407
+          }
+        },
+        "mixed": {
+          "br-helpers": {
+            "medianOpsPerSecond": 12594459.405188631,
+            "meanOpsPerSecond": 12594889.509219483,
+            "minOpsPerSecond": 11954191.538021492,
+            "maxOpsPerSecond": 13239421.702052109,
+            "relativeMarginOfError": 0.2774331924641328,
+            "sampleCount": 252,
+            "totalTimeMs": 3002.71390000009,
+            "periodMsPerBatch": 11.915531349206706,
+            "checksum": 12600000,
+            "runs": 252
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 11058399.551666176,
+            "meanOpsPerSecond": 11068261.962480497,
+            "minOpsPerSecond": 10648568.832348827,
+            "maxOpsPerSecond": 11348333.30810358,
+            "relativeMarginOfError": 0.1979417053512582,
+            "sampleCount": 222,
+            "totalTimeMs": 3009.276400000206,
+            "periodMsPerBatch": 13.555299099100028,
+            "checksum": 11100000,
+            "runs": 222
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 2664714.919645042,
+            "meanOpsPerSecond": 2658805.9785710745,
+            "minOpsPerSecond": 2447129.761502081,
+            "maxOpsPerSecond": 2748042.935423442,
+            "relativeMarginOfError": 0.6472891873219959,
+            "sampleCount": 54,
+            "totalTimeMs": 3048.2190999999875,
+            "periodMsPerBatch": 56.448501851851624,
+            "checksum": 2700000,
+            "runs": 54
+          },
+          "@fnando/cpf": {
+            "medianOpsPerSecond": 2794165.1858068397,
+            "meanOpsPerSecond": 2779270.0583923953,
+            "minOpsPerSecond": 2668094.393620976,
+            "maxOpsPerSecond": 2828208.9329913394,
+            "relativeMarginOfError": 0.4624984698192813,
+            "sampleCount": 56,
+            "totalTimeMs": 3023.2727000005543,
+            "periodMsPerBatch": 53.9870125000099,
+            "checksum": 2800000,
+            "runs": 56
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 4934746.206005393,
+            "meanOpsPerSecond": 4922164.349199081,
+            "minOpsPerSecond": 4818425.659727393,
+            "maxOpsPerSecond": 4988045.318047924,
+            "relativeMarginOfError": 0.14350721412462802,
+            "sampleCount": 99,
+            "totalTimeMs": 3017.121199999936,
+            "periodMsPerBatch": 30.47597171717107,
+            "checksum": 4950000,
+            "runs": 99
+          },
+          "cpf": {
+            "medianOpsPerSecond": 1778392.524341892,
+            "meanOpsPerSecond": 1778048.7606506322,
+            "minOpsPerSecond": 1757111.0283318998,
+            "maxOpsPerSecond": 1794728.523381463,
+            "relativeMarginOfError": 0.18549778918050078,
+            "sampleCount": 36,
+            "totalTimeMs": 3037.1259000000427,
+            "periodMsPerBatch": 84.36460833333452,
+            "checksum": 1800000,
+            "runs": 36
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 4154698.9647243195,
+            "meanOpsPerSecond": 4150710.8031331766,
+            "minOpsPerSecond": 4040338.7420033626,
+            "maxOpsPerSecond": 4200068.881127055,
+            "relativeMarginOfError": 0.14756018038509666,
+            "sampleCount": 84,
+            "totalTimeMs": 3035.764199999685,
+            "periodMsPerBatch": 36.14004999999625,
+            "checksum": 4200000,
+            "runs": 84
+          },
+          "gerador-validador-cpf": {
+            "medianOpsPerSecond": 7013803.164622215,
+            "meanOpsPerSecond": 7008890.914712327,
+            "minOpsPerSecond": 6724346.617662215,
+            "maxOpsPerSecond": 7165821.895883727,
+            "relativeMarginOfError": 0.20239648271093447,
+            "sampleCount": 141,
+            "totalTimeMs": 3018.0423999994528,
+            "periodMsPerBatch": 21.40455602836491,
+            "checksum": 7050000,
+            "runs": 141
+          },
+          "validar-cpf": {
+            "medianOpsPerSecond": 7163973.887602551,
+            "meanOpsPerSecond": 7152672.099266632,
+            "minOpsPerSecond": 6894301.170656146,
+            "maxOpsPerSecond": 7247462.18033324,
+            "relativeMarginOfError": 0.13678457217223908,
+            "sampleCount": 144,
+            "totalTimeMs": 3020.0599999997066,
+            "periodMsPerBatch": 20.972638888886852,
+            "checksum": 7200000,
+            "runs": 144
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 10307542.833098084,
+            "meanOpsPerSecond": 10298893.145035824,
+            "minOpsPerSecond": 9891588.193394622,
+            "maxOpsPerSecond": 10551194.395180378,
+            "relativeMarginOfError": 0.18732747933568442,
+            "sampleCount": 206,
+            "totalTimeMs": 3000.881499999552,
+            "periodMsPerBatch": 14.567385922327922,
+            "checksum": 10300000,
+            "runs": 206
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 4788010.860531073,
+            "meanOpsPerSecond": 4783781.495119753,
+            "minOpsPerSecond": 4689273.131410266,
+            "maxOpsPerSecond": 4856081.918859957,
+            "relativeMarginOfError": 0.17902909266035505,
+            "sampleCount": 96,
+            "totalTimeMs": 3010.4043999994174,
+            "periodMsPerBatch": 31.358379166660598,
+            "checksum": 4800000,
+            "runs": 96
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 4210183.592069984,
+            "meanOpsPerSecond": 4206202.49907293,
+            "minOpsPerSecond": 4128455.5172686726,
+            "maxOpsPerSecond": 4238916.645947939,
+            "relativeMarginOfError": 0.10548446216770821,
+            "sampleCount": 85,
+            "totalTimeMs": 3031.30989999976,
+            "periodMsPerBatch": 35.66246941176188,
+            "checksum": 4268785,
+            "runs": 85
+          }
+        }
+      }
+    },
+    "cnpj": {
+      "id": "cnpj",
+      "label": "CNPJ",
+      "libraries": [
+        {
+          "id": "br-helpers",
+          "label": "br-helpers",
+          "homepage": "https://www.npmjs.com/package/br-helpers",
+          "version": "3.1.1",
+          "source": "npm package"
+        },
+        {
+          "id": "br-helpers-local-dist",
+          "label": "br-helpers (local dist)",
+          "homepage": "https://github.com/alisterlf/br-helpers",
+          "version": "3.1.2",
+          "source": "local dist"
+        },
+        {
+          "id": "cpf-cnpj-validator",
+          "label": "cpf-cnpj-validator",
+          "homepage": "https://www.npmjs.com/package/cpf-cnpj-validator",
+          "version": "1.0.3",
+          "source": "npm package"
+        },
+        {
+          "id": "@fnando/cnpj",
+          "label": "@fnando/cnpj",
+          "homepage": "https://www.npmjs.com/package/@fnando/cnpj",
+          "version": "2.0.0",
+          "source": "npm package"
+        },
+        {
+          "id": "brazilian-values",
+          "label": "brazilian-values",
+          "homepage": "https://www.npmjs.com/package/brazilian-values",
+          "version": "0.13.1",
+          "source": "npm package"
+        },
+        {
+          "id": "js-brasil",
+          "label": "js-brasil",
+          "homepage": "https://www.npmjs.com/package/js-brasil",
+          "version": "2.6.4",
+          "source": "npm package"
+        },
+        {
+          "id": "br-validations",
+          "label": "br-validations",
+          "homepage": "https://www.npmjs.com/package/br-validations",
+          "version": "0.3.1",
+          "source": "npm package"
+        },
+        {
+          "id": "validations-br",
+          "label": "validations-br",
+          "homepage": "https://www.npmjs.com/package/validations-br",
+          "version": "1.6.1",
+          "source": "npm package"
+        },
+        {
+          "id": "validation-br",
+          "label": "validation-br",
+          "homepage": "https://www.npmjs.com/package/validation-br",
+          "version": "1.6.4",
+          "source": "npm package"
+        }
+      ],
+      "skippedLibraries": [
+        {
+          "id": "stdnum",
+          "label": "stdnum",
+          "homepage": "https://www.npmjs.com/package/stdnum",
+          "version": "1.11.13",
+          "source": "npm package",
+          "failures": [
+            "stdnum returned true for CNPJ \"repetido 0\" but expected false."
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "raw_valid",
+          "label": "Válidos sem máscara",
+          "description": "CNPJs válidos com apenas dígitos.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "masked_valid",
+          "label": "Válidos com máscara",
+          "description": "CNPJs válidos com pontuação.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "invalid_wrong_check_digits",
+          "label": "DV incorreto",
+          "description": "CNPJs inválidos com dígitos verificadores incorretos.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "invalid_equal_digits",
+          "label": "Dígitos iguais",
+          "description": "CNPJs inválidos formados por dígitos iguais repetidos.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "invalid_incomplete",
+          "label": "Incompletos",
+          "description": "CNPJs inválidos com dígitos faltando.",
+          "sampleSize": 25000
+        },
+        {
+          "id": "mixed",
+          "label": "Misto",
+          "description": "CNPJs válidos, inválidos, com máscara, repetidos e incompletos misturados.",
+          "sampleSize": 150000
+        }
+      ],
+      "measurements": {
+        "raw_valid": {
+          "br-helpers": {
+            "medianOpsPerSecond": 10808941.156035557,
+            "meanOpsPerSecond": 10786622.48187597,
+            "minOpsPerSecond": 9746208.724779157,
+            "maxOpsPerSecond": 11076650.420994988,
+            "relativeMarginOfError": 0.08021040168444056,
+            "sampleCount": 1295,
+            "totalTimeMs": 3002.081500000786,
+            "periodMsPerBatch": 2.3182096525102596,
+            "checksum": 32375000,
+            "runs": 1295
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 9366102.202893512,
+            "meanOpsPerSecond": 9349407.37725713,
+            "minOpsPerSecond": 8610891.055162989,
+            "maxOpsPerSecond": 9631684.388963869,
+            "relativeMarginOfError": 0.07910452663041173,
+            "sampleCount": 1122,
+            "totalTimeMs": 3000.7558000002755,
+            "periodMsPerBatch": 2.6744704099824204,
+            "checksum": 28050000,
+            "runs": 1122
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 464897.0293455111,
+            "meanOpsPerSecond": 464170.32443553203,
+            "minOpsPerSecond": 453287.78697624843,
+            "maxOpsPerSecond": 467955.3533157006,
+            "relativeMarginOfError": 0.168063430907214,
+            "sampleCount": 56,
+            "totalTimeMs": 3016.2521000000997,
+            "periodMsPerBatch": 53.86164464285893,
+            "checksum": 1400000,
+            "runs": 56
+          },
+          "@fnando/cnpj": {
+            "medianOpsPerSecond": 508188.95685036207,
+            "meanOpsPerSecond": 505942.5134047767,
+            "minOpsPerSecond": 455222.49454631336,
+            "maxOpsPerSecond": 510509.34538462805,
+            "relativeMarginOfError": 0.3671144041866725,
+            "sampleCount": 61,
+            "totalTimeMs": 3014.8409000000684,
+            "periodMsPerBatch": 49.42362131147653,
+            "checksum": 1525000,
+            "runs": 61
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 3773584.905660378,
+            "meanOpsPerSecond": 3770341.629657319,
+            "minOpsPerSecond": 3583715.596317836,
+            "maxOpsPerSecond": 3858262.85571958,
+            "relativeMarginOfError": 0.1122996347869655,
+            "sampleCount": 453,
+            "totalTimeMs": 3004.154799999902,
+            "periodMsPerBatch": 6.631688300220534,
+            "checksum": 11325000,
+            "runs": 453
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 5187260.0892389165,
+            "meanOpsPerSecond": 5163780.310020812,
+            "minOpsPerSecond": 4875575.31788078,
+            "maxOpsPerSecond": 5263268.7003989555,
+            "relativeMarginOfError": 0.10308618644617543,
+            "sampleCount": 620,
+            "totalTimeMs": 3002.19819999882,
+            "periodMsPerBatch": 4.84225516128842,
+            "checksum": 15500000,
+            "runs": 620
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 6987729.546869778,
+            "meanOpsPerSecond": 6976300.162142268,
+            "minOpsPerSecond": 6513300.158919308,
+            "maxOpsPerSecond": 7329014.101090965,
+            "relativeMarginOfError": 0.13929653734470387,
+            "sampleCount": 837,
+            "totalTimeMs": 3000.7084000000614,
+            "periodMsPerBatch": 3.5850757467145296,
+            "checksum": 20925000,
+            "runs": 837
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 4219551.714840873,
+            "meanOpsPerSecond": 4205794.780653929,
+            "minOpsPerSecond": 3573113.0389949703,
+            "maxOpsPerSecond": 4265338.1560200555,
+            "relativeMarginOfError": 0.10555939474407541,
+            "sampleCount": 505,
+            "totalTimeMs": 3002.276100001007,
+            "periodMsPerBatch": 5.945101188120805,
+            "checksum": 12625000,
+            "runs": 505
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 1042948.6243509467,
+            "meanOpsPerSecond": 1040387.0515565294,
+            "minOpsPerSecond": 946260.0019670599,
+            "maxOpsPerSecond": 1051034.0072551619,
+            "relativeMarginOfError": 0.1880362191053524,
+            "sampleCount": 125,
+            "totalTimeMs": 3004.046700000239,
+            "periodMsPerBatch": 24.03237360000191,
+            "checksum": 3125000,
+            "runs": 125
+          }
+        },
+        "masked_valid": {
+          "br-helpers": {
+            "medianOpsPerSecond": 4112856.7914374983,
+            "meanOpsPerSecond": 4096803.984823149,
+            "minOpsPerSecond": 3843433.877537651,
+            "maxOpsPerSecond": 4184870.854897553,
+            "relativeMarginOfError": 0.1271929038249266,
+            "sampleCount": 492,
+            "totalTimeMs": 3002.970500001393,
+            "periodMsPerBatch": 6.103598577238603,
+            "checksum": 12300000,
+            "runs": 492
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 3552726.008277182,
+            "meanOpsPerSecond": 3543952.143416942,
+            "minOpsPerSecond": 3356786.0787304356,
+            "maxOpsPerSecond": 3627657.258958598,
+            "relativeMarginOfError": 0.13207984204040127,
+            "sampleCount": 426,
+            "totalTimeMs": 3005.7047999997158,
+            "periodMsPerBatch": 7.055645070421868,
+            "checksum": 10650000,
+            "runs": 426
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 413185.58594578557,
+            "meanOpsPerSecond": 412032.87299664534,
+            "minOpsPerSecond": 401667.07904511964,
+            "maxOpsPerSecond": 415982.37565849087,
+            "relativeMarginOfError": 0.24832263595576134,
+            "sampleCount": 50,
+            "totalTimeMs": 3033.967900000338,
+            "periodMsPerBatch": 60.67935800000676,
+            "checksum": 1250000,
+            "runs": 50
+          },
+          "@fnando/cnpj": {
+            "medianOpsPerSecond": 431694.30637242063,
+            "meanOpsPerSecond": 430993.38559853635,
+            "minOpsPerSecond": 423496.24951703125,
+            "maxOpsPerSecond": 433056.40819549403,
+            "relativeMarginOfError": 0.14768656117843212,
+            "sampleCount": 52,
+            "totalTimeMs": 3016.3718000003137,
+            "periodMsPerBatch": 58.007150000006035,
+            "checksum": 1300000,
+            "runs": 52
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 2196991.0017987383,
+            "meanOpsPerSecond": 2195412.5205381927,
+            "minOpsPerSecond": 2127460.4079523487,
+            "maxOpsPerSecond": 2221827.2307072757,
+            "relativeMarginOfError": 0.08039836090615113,
+            "sampleCount": 264,
+            "totalTimeMs": 3006.401600000856,
+            "periodMsPerBatch": 11.38788484848809,
+            "checksum": 6600000,
+            "runs": 264
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 2416661.455465234,
+            "meanOpsPerSecond": 2410854.024752245,
+            "minOpsPerSecond": 2339422.069170727,
+            "maxOpsPerSecond": 2440119.46824575,
+            "relativeMarginOfError": 0.09705241483754812,
+            "sampleCount": 290,
+            "totalTimeMs": 3007.4465999999084,
+            "periodMsPerBatch": 10.370505517241064,
+            "checksum": 7250000,
+            "runs": 290
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 3645537.133444856,
+            "meanOpsPerSecond": 3637641.0569496825,
+            "minOpsPerSecond": 3486166.8897615625,
+            "maxOpsPerSecond": 3724117.3841861496,
+            "relativeMarginOfError": 0.10554707903408624,
+            "sampleCount": 437,
+            "totalTimeMs": 3003.700900000462,
+            "periodMsPerBatch": 6.873457437071995,
+            "checksum": 10925000,
+            "runs": 437
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 2362893.135262339,
+            "meanOpsPerSecond": 2361113.9611271396,
+            "minOpsPerSecond": 2281667.259890089,
+            "maxOpsPerSecond": 2403522.602732711,
+            "relativeMarginOfError": 0.10731106226295303,
+            "sampleCount": 284,
+            "totalTimeMs": 3007.3096000002697,
+            "periodMsPerBatch": 10.589118309860105,
+            "checksum": 7100000,
+            "runs": 284
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 860209.1340443877,
+            "meanOpsPerSecond": 858312.4813426055,
+            "minOpsPerSecond": 837739.8449172156,
+            "maxOpsPerSecond": 867793.4096299066,
+            "relativeMarginOfError": 0.15967270762505878,
+            "sampleCount": 103,
+            "totalTimeMs": 3000.2728999998653,
+            "periodMsPerBatch": 29.12886310679481,
+            "checksum": 2575000,
+            "runs": 103
+          }
+        },
+        "invalid_wrong_check_digits": {
+          "br-helpers": {
+            "medianOpsPerSecond": 5735786.720535876,
+            "meanOpsPerSecond": 5726839.259759813,
+            "minOpsPerSecond": 5409967.323809793,
+            "maxOpsPerSecond": 5902630.212015469,
+            "relativeMarginOfError": 0.08923110598861325,
+            "sampleCount": 688,
+            "totalTimeMs": 3003.833299999649,
+            "periodMsPerBatch": 4.366036773255304,
+            "checksum": 0,
+            "runs": 688
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 5032915.284207217,
+            "meanOpsPerSecond": 5015936.668176452,
+            "minOpsPerSecond": 4650643.649106735,
+            "maxOpsPerSecond": 5099855.16410646,
+            "relativeMarginOfError": 0.09476865292118539,
+            "sampleCount": 602,
+            "totalTimeMs": 3000.866000000213,
+            "periodMsPerBatch": 4.98482724252527,
+            "checksum": 0,
+            "runs": 602
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 433292.08401028457,
+            "meanOpsPerSecond": 432544.68905021914,
+            "minOpsPerSecond": 425713.0693913991,
+            "maxOpsPerSecond": 435279.20549336425,
+            "relativeMarginOfError": 0.1380310515668971,
+            "sampleCount": 52,
+            "totalTimeMs": 3005.5427000001655,
+            "periodMsPerBatch": 57.79889807692626,
+            "checksum": 0,
+            "runs": 52
+          },
+          "@fnando/cnpj": {
+            "medianOpsPerSecond": 460633.8733704677,
+            "meanOpsPerSecond": 460128.89075571956,
+            "minOpsPerSecond": 452745.9950092252,
+            "maxOpsPerSecond": 463879.5546014405,
+            "relativeMarginOfError": 0.14267696402287736,
+            "sampleCount": 56,
+            "totalTimeMs": 3042.710999999952,
+            "periodMsPerBatch": 54.33412499999914,
+            "checksum": 0,
+            "runs": 56
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 2661981.5790798175,
+            "meanOpsPerSecond": 2654826.87322372,
+            "minOpsPerSecond": 2515217.0632379777,
+            "maxOpsPerSecond": 2712614.7435964723,
+            "relativeMarginOfError": 0.144253581176971,
+            "sampleCount": 319,
+            "totalTimeMs": 3004.4859999999753,
+            "periodMsPerBatch": 9.41845141065823,
+            "checksum": 0,
+            "runs": 319
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 3100544.459887611,
+            "meanOpsPerSecond": 3094759.909869422,
+            "minOpsPerSecond": 2944155.262972303,
+            "maxOpsPerSecond": 3190566.1340583917,
+            "relativeMarginOfError": 0.136296519651041,
+            "sampleCount": 372,
+            "totalTimeMs": 3005.6200999995926,
+            "periodMsPerBatch": 8.079623924730088,
+            "checksum": 0,
+            "runs": 372
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 4537534.485270065,
+            "meanOpsPerSecond": 4538282.332755454,
+            "minOpsPerSecond": 4208116.615295716,
+            "maxOpsPerSecond": 4700573.469968686,
+            "relativeMarginOfError": 0.12764733052228405,
+            "sampleCount": 545,
+            "totalTimeMs": 3002.9316000004765,
+            "periodMsPerBatch": 5.509966238532984,
+            "checksum": 0,
+            "runs": 545
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 2862311.3770552906,
+            "meanOpsPerSecond": 2860809.7890726933,
+            "minOpsPerSecond": 2746830.1580021963,
+            "maxOpsPerSecond": 2924729.170078755,
+            "relativeMarginOfError": 0.12153426027876521,
+            "sampleCount": 344,
+            "totalTimeMs": 3006.539000000281,
+            "periodMsPerBatch": 8.739938953489188,
+            "checksum": 0,
+            "runs": 344
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 799600.8392599549,
+            "meanOpsPerSecond": 801148.5933579422,
+            "minOpsPerSecond": 781374.531566198,
+            "maxOpsPerSecond": 816603.8426117969,
+            "relativeMarginOfError": 0.20714732274926156,
+            "sampleCount": 97,
+            "totalTimeMs": 3027.2203000001027,
+            "periodMsPerBatch": 31.208456701031988,
+            "checksum": 0,
+            "runs": 97
+          }
+        },
+        "invalid_equal_digits": {
+          "br-helpers": {
+            "medianOpsPerSecond": 18514404.2065965,
+            "meanOpsPerSecond": 18455937.542526487,
+            "minOpsPerSecond": 15878056.525416331,
+            "maxOpsPerSecond": 19190911.184460294,
+            "relativeMarginOfError": 0.08957927784998838,
+            "sampleCount": 2214,
+            "totalTimeMs": 3000.498299998755,
+            "periodMsPerBatch": 1.3552386178856166,
+            "checksum": 0,
+            "runs": 2214
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 14678252.700893205,
+            "meanOpsPerSecond": 14633967.90372346,
+            "minOpsPerSecond": 12978922.230384594,
+            "maxOpsPerSecond": 15128593.040612731,
+            "relativeMarginOfError": 0.08833102625208494,
+            "sampleCount": 1756,
+            "totalTimeMs": 3000.9914000004064,
+            "periodMsPerBatch": 1.7089928246015982,
+            "checksum": 0,
+            "runs": 1756
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 9986418.470931986,
+            "meanOpsPerSecond": 9969192.684192155,
+            "minOpsPerSecond": 9554748.71009532,
+            "maxOpsPerSecond": 10110405.629539732,
+            "relativeMarginOfError": 0.040445574770039405,
+            "sampleCount": 1197,
+            "totalTimeMs": 3001.9024000004865,
+            "periodMsPerBatch": 2.5078549707606403,
+            "checksum": 0,
+            "runs": 1197
+          },
+          "@fnando/cnpj": {
+            "medianOpsPerSecond": 19915558.03455964,
+            "meanOpsPerSecond": 19862545.652035393,
+            "minOpsPerSecond": 11277008.435205152,
+            "maxOpsPerSecond": 20783107.48966232,
+            "relativeMarginOfError": 0.11493888147846214,
+            "sampleCount": 2382,
+            "totalTimeMs": 3000.7812999986345,
+            "periodMsPerBatch": 1.2597738455074032,
+            "checksum": 0,
+            "runs": 2382
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 4294720.929033276,
+            "meanOpsPerSecond": 4279181.654920733,
+            "minOpsPerSecond": 4046944.5568656726,
+            "maxOpsPerSecond": 4352746.58306323,
+            "relativeMarginOfError": 0.0944790429944098,
+            "sampleCount": 514,
+            "totalTimeMs": 3003.2723000003607,
+            "periodMsPerBatch": 5.842942217899535,
+            "checksum": 0,
+            "runs": 514
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 9571209.801048517,
+            "meanOpsPerSecond": 9539999.540279478,
+            "minOpsPerSecond": 8694744.896141658,
+            "maxOpsPerSecond": 9891196.834944576,
+            "relativeMarginOfError": 0.10378356135483935,
+            "sampleCount": 1145,
+            "totalTimeMs": 3001.511400000134,
+            "periodMsPerBatch": 2.6214073362446584,
+            "checksum": 0,
+            "runs": 1145
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 17554946.984013036,
+            "meanOpsPerSecond": 17501145.624628562,
+            "minOpsPerSecond": 15520238.390630169,
+            "maxOpsPerSecond": 18379650.051523425,
+            "relativeMarginOfError": 0.07525124297379392,
+            "sampleCount": 2100,
+            "totalTimeMs": 3000.7724999993225,
+            "periodMsPerBatch": 1.4289392857139631,
+            "checksum": 0,
+            "runs": 2100
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 6206554.121165569,
+            "meanOpsPerSecond": 6192107.63249793,
+            "minOpsPerSecond": 5759705.103110462,
+            "maxOpsPerSecond": 6294216.873530101,
+            "relativeMarginOfError": 0.07844954565401727,
+            "sampleCount": 743,
+            "totalTimeMs": 3000.153599999845,
+            "periodMsPerBatch": 4.0378917900401685,
+            "checksum": 0,
+            "runs": 743
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 5969151.425468933,
+            "meanOpsPerSecond": 5951277.49891081,
+            "minOpsPerSecond": 5626955.367033789,
+            "maxOpsPerSecond": 6093696.6800916605,
+            "relativeMarginOfError": 0.09158517872510939,
+            "sampleCount": 715,
+            "totalTimeMs": 3004.0335000000778,
+            "periodMsPerBatch": 4.2014454545455635,
+            "checksum": 0,
+            "runs": 715
+          }
+        },
+        "invalid_incomplete": {
+          "br-helpers": {
+            "medianOpsPerSecond": 18870772.94682939,
+            "meanOpsPerSecond": 18790068.463482983,
+            "minOpsPerSecond": 16477722.11967192,
+            "maxOpsPerSecond": 19327406.262517978,
+            "relativeMarginOfError": 0.07996605188131452,
+            "sampleCount": 2254,
+            "totalTimeMs": 3000.109700002882,
+            "periodMsPerBatch": 1.3310158385105955,
+            "checksum": 0,
+            "runs": 2254
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 14726239.22591389,
+            "meanOpsPerSecond": 14670998.54314427,
+            "minOpsPerSecond": 12980943.974036146,
+            "maxOpsPerSecond": 15178191.973754061,
+            "relativeMarginOfError": 0.08600308608381126,
+            "sampleCount": 1760,
+            "totalTimeMs": 3000.1708000004874,
+            "periodMsPerBatch": 1.704642500000277,
+            "checksum": 0,
+            "runs": 1760
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 26335194.352718957,
+            "meanOpsPerSecond": 26259527.093564868,
+            "minOpsPerSecond": 20864630.27902391,
+            "maxOpsPerSecond": 27970463.192071203,
+            "relativeMarginOfError": 0.09098070503099556,
+            "sampleCount": 3149,
+            "totalTimeMs": 3000.144799998263,
+            "periodMsPerBatch": 0.9527293744040213,
+            "checksum": 0,
+            "runs": 3149
+          },
+          "@fnando/cnpj": {
+            "medianOpsPerSecond": 19942565.41167233,
+            "meanOpsPerSecond": 19884350.185335588,
+            "minOpsPerSecond": 17038097.185092222,
+            "maxOpsPerSecond": 20589688.684117142,
+            "relativeMarginOfError": 0.07772386821144164,
+            "sampleCount": 2386,
+            "totalTimeMs": 3001.04199999955,
+            "periodMsPerBatch": 1.257771165129736,
+            "checksum": 0,
+            "runs": 2386
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 87260034.9078433,
+            "meanOpsPerSecond": 86391638.733754,
+            "minOpsPerSecond": 57883769.38770517,
+            "maxOpsPerSecond": 89158345.22469588,
+            "relativeMarginOfError": 0.050397851493346725,
+            "sampleCount": 10360,
+            "totalTimeMs": 3000.1610999997356,
+            "periodMsPerBatch": 0.28959083976831423,
+            "checksum": 0,
+            "runs": 10360
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 11045330.034480063,
+            "meanOpsPerSecond": 11005608.043900568,
+            "minOpsPerSecond": 9687294.14503193,
+            "maxOpsPerSecond": 11495838.506289829,
+            "relativeMarginOfError": 0.1012746044783899,
+            "sampleCount": 1321,
+            "totalTimeMs": 3001.8292000003275,
+            "periodMsPerBatch": 2.2723915215748125,
+            "checksum": 0,
+            "runs": 1321
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 26679472.88935822,
+            "meanOpsPerSecond": 26500298.867993724,
+            "minOpsPerSecond": 8794146.616061935,
+            "maxOpsPerSecond": 27740790.05702141,
+            "relativeMarginOfError": 0.10791269207722949,
+            "sampleCount": 3176,
+            "totalTimeMs": 3000.3430999999982,
+            "periodMsPerBatch": 0.9446924118387904,
+            "checksum": 0,
+            "runs": 3176
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 26337968.81657625,
+            "meanOpsPerSecond": 26237380.92932865,
+            "minOpsPerSecond": 15420676.042493511,
+            "maxOpsPerSecond": 27496700.396115847,
+            "relativeMarginOfError": 0.0916951708372201,
+            "sampleCount": 3146,
+            "totalTimeMs": 3000.020899998548,
+            "periodMsPerBatch": 0.9535985060389536,
+            "checksum": 0,
+            "runs": 3146
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 1420107.5873503068,
+            "meanOpsPerSecond": 1419558.0434749422,
+            "minOpsPerSecond": 1384420.287851301,
+            "maxOpsPerSecond": 1443951.5756404563,
+            "relativeMarginOfError": 0.12895638165609552,
+            "sampleCount": 171,
+            "totalTimeMs": 3011.719700000307,
+            "periodMsPerBatch": 17.612395906434543,
+            "checksum": 0,
+            "runs": 171
+          }
+        },
+        "mixed": {
+          "br-helpers": {
+            "medianOpsPerSecond": 7454156.934842734,
+            "meanOpsPerSecond": 7439486.673026747,
+            "minOpsPerSecond": 7204264.924836792,
+            "maxOpsPerSecond": 7591016.285275405,
+            "relativeMarginOfError": 0.14381509673831042,
+            "sampleCount": 149,
+            "totalTimeMs": 3004.4765999997035,
+            "periodMsPerBatch": 20.164272483219488,
+            "checksum": 7450000,
+            "runs": 149
+          },
+          "br-helpers-local-dist": {
+            "medianOpsPerSecond": 6411489.388989401,
+            "meanOpsPerSecond": 6406607.114797004,
+            "minOpsPerSecond": 6284222.830172573,
+            "maxOpsPerSecond": 6503049.93041839,
+            "relativeMarginOfError": 0.13623894033945813,
+            "sampleCount": 129,
+            "totalTimeMs": 3020.502999999735,
+            "periodMsPerBatch": 23.41475193798244,
+            "checksum": 6450000,
+            "runs": 129
+          },
+          "cpf-cnpj-validator": {
+            "medianOpsPerSecond": 636237.2757846729,
+            "meanOpsPerSecond": 635711.2432767828,
+            "minOpsPerSecond": 632843.3016701033,
+            "maxOpsPerSecond": 637391.6912167714,
+            "relativeMarginOfError": 0.13326155451905825,
+            "sampleCount": 13,
+            "totalTimeMs": 3067.444200000027,
+            "periodMsPerBatch": 235.95724615384825,
+            "checksum": 650000,
+            "runs": 13
+          },
+          "@fnando/cnpj": {
+            "medianOpsPerSecond": 674231.0949527328,
+            "meanOpsPerSecond": 675407.9882293007,
+            "minOpsPerSecond": 671823.2836035215,
+            "maxOpsPerSecond": 679884.2202499153,
+            "relativeMarginOfError": 0.24489197380936872,
+            "sampleCount": 14,
+            "totalTimeMs": 3109.2837000000873,
+            "periodMsPerBatch": 222.0916928571491,
+            "checksum": 700000,
+            "runs": 14
+          },
+          "brazilian-values": {
+            "medianOpsPerSecond": 3419333.366764768,
+            "meanOpsPerSecond": 3417098.0674959687,
+            "minOpsPerSecond": 3354136.432852432,
+            "maxOpsPerSecond": 3444728.1879831543,
+            "relativeMarginOfError": 0.12043758435619303,
+            "sampleCount": 69,
+            "totalTimeMs": 3028.961500000092,
+            "periodMsPerBatch": 43.89799275362452,
+            "checksum": 3450000,
+            "runs": 69
+          },
+          "js-brasil": {
+            "medianOpsPerSecond": 4053561.0800265064,
+            "meanOpsPerSecond": 4050813.208279351,
+            "minOpsPerSecond": 3981694.8216689876,
+            "maxOpsPerSecond": 4098103.124663922,
+            "relativeMarginOfError": 0.12775183198459122,
+            "sampleCount": 82,
+            "totalTimeMs": 3036.529099999869,
+            "periodMsPerBatch": 37.030842682925226,
+            "checksum": 4100000,
+            "runs": 82
+          },
+          "br-validations": {
+            "medianOpsPerSecond": 6178471.390791206,
+            "meanOpsPerSecond": 6169575.601528233,
+            "minOpsPerSecond": 5988286.910803829,
+            "maxOpsPerSecond": 6296568.370235759,
+            "relativeMarginOfError": 0.20438276076882805,
+            "sampleCount": 124,
+            "totalTimeMs": 3015.192399999767,
+            "periodMsPerBatch": 24.316067741933605,
+            "checksum": 6200000,
+            "runs": 124
+          },
+          "validations-br": {
+            "medianOpsPerSecond": 3665153.239374499,
+            "meanOpsPerSecond": 3657654.663716321,
+            "minOpsPerSecond": 3494467.093769148,
+            "maxOpsPerSecond": 3700295.7769734524,
+            "relativeMarginOfError": 0.20735377899088386,
+            "sampleCount": 74,
+            "totalTimeMs": 3034.9760000003735,
+            "periodMsPerBatch": 41.013189189194236,
+            "checksum": 3700000,
+            "runs": 74
+          },
+          "validation-br": {
+            "medianOpsPerSecond": 1064677.6904866188,
+            "meanOpsPerSecond": 1063874.4434910556,
+            "minOpsPerSecond": 1055404.5154424673,
+            "maxOpsPerSecond": 1073241.5831028775,
+            "relativeMarginOfError": 0.21722593561622175,
+            "sampleCount": 22,
+            "totalTimeMs": 3101.9409000001033,
+            "periodMsPerBatch": 140.99731363636832,
+            "checksum": 1100000,
+            "runs": 22
+          }
+        }
+      }
+    }
+  }
+}
