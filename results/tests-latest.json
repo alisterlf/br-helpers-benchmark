@@ -1,0 +1,681 @@
+{
+  "generatedAt": "2026-08-11T05:36:00.355Z",
+  "suites": [
+    {
+      "id": "cpf-spec",
+      "documentId": "cpf",
+      "label": "CPF spec",
+      "total": 15
+    },
+    {
+      "id": "cpf-lenient",
+      "documentId": "cpf",
+      "label": "CPF leniente",
+      "total": 5
+    },
+    {
+      "id": "cnpj-spec",
+      "documentId": "cnpj",
+      "label": "CNPJ spec",
+      "total": 29
+    },
+    {
+      "id": "cnpj-lenient",
+      "documentId": "cnpj",
+      "label": "CNPJ leniente",
+      "total": 5
+    }
+  ],
+  "libraries": [
+    {
+      "id": "br-helpers",
+      "label": "br-helpers",
+      "homepage": "https://www.npmjs.com/package/br-helpers",
+      "version": "3.3.0",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 5,
+          "failures": []
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 29,
+          "failures": []
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 5,
+          "failures": []
+        }
+      }
+    },
+    {
+      "id": "cpf-cnpj-validator",
+      "label": "cpf-cnpj-validator",
+      "homepage": "https://www.npmjs.com/package/cpf-cnpj-validator",
+      "version": "2.1.2",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 4,
+          "failures": [
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 29,
+          "failures": []
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 4,
+          "failures": [
+            {
+              "label": "Should accept numeric input",
+              "value": 26533854000127,
+              "expected": true,
+              "actual": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "@fnando/cpf",
+      "label": "@fnando/cpf",
+      "homepage": "https://www.npmjs.com/package/@fnando/cpf",
+      "version": "1.0.2",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 5,
+          "failures": []
+        },
+        "cnpj-spec": null,
+        "cnpj-lenient": null
+      }
+    },
+    {
+      "id": "@fnando/cnpj",
+      "label": "@fnando/cnpj",
+      "homepage": "https://www.npmjs.com/package/@fnando/cnpj",
+      "version": "2.0.0",
+      "suites": {
+        "cpf-spec": null,
+        "cpf-lenient": null,
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 29,
+          "failures": []
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 5,
+          "failures": []
+        }
+      }
+    },
+    {
+      "id": "brazilian-values",
+      "label": "brazilian-values",
+      "homepage": "https://www.npmjs.com/package/brazilian-values",
+      "version": "0.14.0",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 14,
+          "failures": [
+            {
+              "label": "Should return true to a valid CPF with separator -",
+              "value": "137686636-63",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 0,
+          "failures": [
+            {
+              "label": "Should ignore spaces around and between digits",
+              "value": " 137 686 636 63 ",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore separators at unusual positions",
+              "value": "1.3.7.6.8.6.6.3.6.6.3",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore doubled separators",
+              "value": "137..686..636--63",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore letters mixed into a valid CPF",
+              "value": "a13768663663",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": "threw (value.replace is not a function)"
+            }
+          ]
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 29,
+          "failures": []
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 2,
+          "failures": [
+            {
+              "label": "Should ignore spaces around and between characters",
+              "value": " 26 149 878 0001 87 ",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore non-ASCII characters",
+              "value": "é26.149.878/0001-87",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 26533854000127,
+              "expected": true,
+              "actual": "threw (cnpj.replace is not a function)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cpf",
+      "label": "cpf",
+      "homepage": "https://www.npmjs.com/package/cpf",
+      "version": "3.0.0",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 3,
+          "failures": [
+            {
+              "label": "Should ignore letters mixed into a valid CPF",
+              "value": "a13768663663",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 28,
+          "failures": [
+            {
+              "label": "Should return true to a valid alphanumeric CNPJ typed in lowercase",
+              "value": "12abc34501de35",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 3,
+          "failures": [
+            {
+              "label": "Should ignore non-ASCII characters",
+              "value": "é26.149.878/0001-87",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 26533854000127,
+              "expected": true,
+              "actual": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "js-brasil",
+      "label": "js-brasil",
+      "homepage": "https://www.npmjs.com/package/js-brasil",
+      "version": "2.8.0",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 2,
+          "failures": [
+            {
+              "label": "Should ignore spaces around and between digits",
+              "value": " 137 686 636 63 ",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore letters mixed into a valid CPF",
+              "value": "a13768663663",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": "threw (strCPF.replace is not a function)"
+            }
+          ]
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 28,
+          "failures": [
+            {
+              "label": "Should return true to a valid alphanumeric CNPJ typed in lowercase",
+              "value": "12abc34501de35",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 2,
+          "failures": [
+            {
+              "label": "Should ignore spaces around and between characters",
+              "value": " 26 149 878 0001 87 ",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore non-ASCII characters",
+              "value": "é26.149.878/0001-87",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 26533854000127,
+              "expected": true,
+              "actual": "threw (cnpj.replace is not a function)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "gerador-validador-cpf",
+      "label": "gerador-validador-cpf",
+      "homepage": "https://www.npmjs.com/package/gerador-validador-cpf",
+      "version": "6.3.0",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 2,
+          "failures": [
+            {
+              "label": "Should ignore spaces around and between digits",
+              "value": " 137 686 636 63 ",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore letters mixed into a valid CPF",
+              "value": "a13768663663",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-spec": null,
+        "cnpj-lenient": null
+      }
+    },
+    {
+      "id": "validar-cpf",
+      "label": "validar-cpf",
+      "homepage": "https://www.npmjs.com/package/validar-cpf",
+      "version": "3.1.1",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 4,
+          "failures": [
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": "threw (input.replace is not a function)"
+            }
+          ]
+        },
+        "cnpj-spec": null,
+        "cnpj-lenient": null
+      }
+    },
+    {
+      "id": "stdnum",
+      "label": "stdnum",
+      "homepage": "https://www.npmjs.com/package/stdnum",
+      "version": "1.12.6",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 14,
+          "failures": [
+            {
+              "label": "Should return false is 11 repeat digits",
+              "value": "00000000000",
+              "expected": false,
+              "actual": true
+            }
+          ]
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 3,
+          "failures": [
+            {
+              "label": "Should ignore letters mixed into a valid CPF",
+              "value": "a13768663663",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 28,
+          "failures": [
+            {
+              "label": "Should return false is 14 repeat digits",
+              "value": "00000000000000",
+              "expected": false,
+              "actual": true
+            }
+          ]
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 3,
+          "failures": [
+            {
+              "label": "Should ignore non-ASCII characters",
+              "value": "é26.149.878/0001-87",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should accept numeric input",
+              "value": 26533854000127,
+              "expected": true,
+              "actual": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "br-validations",
+      "label": "br-validations",
+      "homepage": "https://www.npmjs.com/package/br-validations",
+      "version": "0.3.1",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 4,
+          "failures": [
+            {
+              "label": "Should accept numeric input",
+              "value": 13768663663,
+              "expected": true,
+              "actual": "threw (cpf.replace is not a function)"
+            }
+          ]
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 20,
+          "failures": [
+            {
+              "label": "Should validate custom CNPJ code 2C.B1S.6Z0/0001-20",
+              "value": "2C.B1S.6Z0/0001-20",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should validate custom CNPJ code V1.3N0.P6L/0001-69",
+              "value": "V1.3N0.P6L/0001-69",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should validate custom CNPJ code 3X.3ZY.B12/0001-10",
+              "value": "3X.3ZY.B12/0001-10",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should validate custom CNPJ code 3X.3ZY.B12/A7E3-81",
+              "value": "3X.3ZY.B12/A7E3-81",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should validate custom CNPJ code 2C.2GL.8D3/0001-26",
+              "value": "2C.2GL.8D3/0001-26",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should return true to a valid alphanumeric CNPJ",
+              "value": "12ABC34501DE35",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should return true to a valid alphanumeric CNPJ typed in lowercase",
+              "value": "12abc34501de35",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should return true to another valid alphanumeric CNPJ",
+              "value": "1345C3A5000106",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should return true to an all-letter valid alphanumeric CNPJ",
+              "value": "ABCDEFGHIJKL80",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 4,
+          "failures": [
+            {
+              "label": "Should accept numeric input",
+              "value": 26533854000127,
+              "expected": true,
+              "actual": "threw (c.replace is not a function)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "validations-br",
+      "label": "validations-br",
+      "homepage": "https://www.npmjs.com/package/validations-br",
+      "version": "1.7.0",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 5,
+          "failures": []
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 28,
+          "failures": [
+            {
+              "label": "Should return true to a valid alphanumeric CNPJ typed in lowercase",
+              "value": "12abc34501de35",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 3,
+          "failures": [
+            {
+              "label": "Should ignore spaces around and between characters",
+              "value": " 26 149 878 0001 87 ",
+              "expected": true,
+              "actual": false
+            },
+            {
+              "label": "Should ignore non-ASCII characters",
+              "value": "é26.149.878/0001-87",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "validation-br",
+      "label": "validation-br",
+      "homepage": "https://www.npmjs.com/package/validation-br",
+      "version": "1.6.4",
+      "suites": {
+        "cpf-spec": {
+          "total": 15,
+          "passed": 15,
+          "failures": []
+        },
+        "cpf-lenient": {
+          "total": 5,
+          "passed": 4,
+          "failures": [
+            {
+              "label": "Should ignore letters mixed into a valid CPF",
+              "value": "a13768663663",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        },
+        "cnpj-spec": {
+          "total": 29,
+          "passed": 29,
+          "failures": []
+        },
+        "cnpj-lenient": {
+          "total": 5,
+          "passed": 4,
+          "failures": [
+            {
+              "label": "Should ignore non-ASCII characters",
+              "value": "é26.149.878/0001-87",
+              "expected": true,
+              "actual": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

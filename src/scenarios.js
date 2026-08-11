@@ -81,6 +81,7 @@ function invalidateNumericDocument(value) {
 function createNumericDataset(size, definition) {
   const validRaw = [];
   const validMasked = [];
+  const validLenient = [];
   const invalidWrongCheckDigits = [];
   const invalidEqualDigits = [];
   const invalidIncomplete = [];
@@ -95,6 +96,7 @@ function createNumericDataset(size, definition) {
 
     validRaw.push(validValue);
     validMasked.push(maskedValue);
+    validLenient.push(definition.createLenientValue(validValue, maskedValue, index));
     invalidWrongCheckDigits.push(index % 2 === 0 ? invalidValue : definition.format(invalidValue));
     invalidEqualDigits.push(repeatedValue);
     invalidIncomplete.push(definition.createIncompleteValue(validValue, maskedValue, index));
@@ -111,6 +113,7 @@ function createNumericDataset(size, definition) {
   return {
     validRaw,
     validMasked,
+    validLenient,
     invalidWrongCheckDigits,
     invalidEqualDigits,
     invalidIncomplete,
@@ -133,6 +136,16 @@ const documentDefinitions = {
     repeatedValues: cpfRepeatedValues,
     createIncompleteValue(rawValue, maskedValue, index) {
       const variants = [rawValue.slice(0, 3), rawValue.slice(0, 6), maskedValue.slice(0, 7), maskedValue.slice(0, 11)];
+      return variants[index % variants.length];
+    },
+    createLenientValue(rawValue, maskedValue, index) {
+      const variants = [
+        maskedValue.replace(/\./g, ' '),
+        ` ${rawValue} `,
+        `${rawValue.slice(0, 5)}.${rawValue.slice(5)}`,
+        `a${rawValue}`,
+        maskedValue.replace('-', '--'),
+      ];
       return variants[index % variants.length];
     },
     createSanityCases() {
@@ -160,6 +173,15 @@ const documentDefinitions = {
     repeatedValues: cnpjRepeatedValues,
     createIncompleteValue(rawValue, maskedValue, index) {
       const variants = [rawValue.slice(0, 4), rawValue.slice(0, 8), maskedValue.slice(0, 6), maskedValue.slice(0, 14)];
+      return variants[index % variants.length];
+    },
+    createLenientValue(rawValue, maskedValue, index) {
+      const variants = [
+        maskedValue.replace(/\./g, ' '),
+        ` ${rawValue} `,
+        `${rawValue.slice(0, 6)}.${rawValue.slice(6)}`,
+        maskedValue.replace('-', '--'),
+      ];
       return variants[index % variants.length];
     },
     createSanityCases() {
@@ -204,6 +226,12 @@ function buildScenarios(documentId, size) {
       label: 'Válidos com máscara',
       description: `${definition.pluralLabel} válidos com pontuação.`,
       values: dataset.validMasked,
+    },
+    {
+      id: 'lenient_valid',
+      label: 'Válidos leniente',
+      description: `${definition.pluralLabel} válidos com formatação fora do padrão (espaços, separadores deslocados ou duplicados). Nem toda biblioteca aceita estes valores; veja os casos de teste lenientes.`,
+      values: dataset.validLenient,
     },
     {
       id: 'invalid_wrong_check_digits',

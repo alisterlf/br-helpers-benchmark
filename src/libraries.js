@@ -172,7 +172,8 @@ const libraryDefinitions = [
     homepage: 'https://www.npmjs.com/package/cpf',
     packageName: 'cpf',
     validatorsByDocument: {
-      cpf: (moduleValue) => moduleValue.isValid,
+      cpf: (moduleValue) => moduleValue.cpf.isValid,
+      cnpj: (moduleValue) => moduleValue.cnpj.isValid,
     },
   }),
   createPackageLibrary({
